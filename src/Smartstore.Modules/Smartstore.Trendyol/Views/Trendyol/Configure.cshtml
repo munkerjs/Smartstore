@@ -1,0 +1,49 @@
+﻿@model TrendyolApiModel
+
+
+@{
+    Layout = "_ConfigureModule";
+}
+
+@await Component.InvokeAsync("StoreScope")
+
+<form asp-action="Configure">
+    <widget target-zone="admin_button_toolbar_before">
+        <button id="SaveConfigButton" type="submit" name="save" class="btn btn-warning" value="save">
+            <i class="fa fa-check"></i>
+            <span>@T("Admin.Common.Save")</span>
+        </button>
+    </widget>
+
+    <div asp-validation-summary="All"></div>
+
+    <div class="adminContent">
+        <div class="adminRow">
+            <div class="adminTitle">
+                <smart-label asp-for="ApiKey" />
+            </div>
+            <div class="adminData">
+                <setting-editor asp-for="ApiKey" data-toggler-for="#pnlIgnorePaths"></setting-editor>
+                <span asp-validation-for="ApiKey"></span>
+            </div>
+        </div>
+        <div id="pnlIgnorePaths" class="adminRow">
+            <div class="adminTitle">
+                <smart-label asp-for="ApiSecret" />
+            </div>
+            <div class="adminData">
+                <setting-editor asp-for="ApiSecret"></setting-editor>
+                <span asp-validation-for="ApiSecret"></span>
+            </div>
+        </div>
+        <div class="adminRow">
+            <div class="adminTitle">
+                <smart-label asp-for="ApiUrl" />
+            </div>
+            <div class="adminData">
+                <setting-editor asp-for="ApiUrl"></setting-editor>
+                <span asp-validation-for="ApiUrl"></span>
+            </div>
+        </div>
+    </div>
+</form>

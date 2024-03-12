@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+    <PropertyGroup>
+        <Product>Smartstore Trendyol</Product>
+        <OutputPath>..\..\Smartstore.Web\Modules\Smartstore.Trendyol</OutputPath>
+        <OutDir>$(OutputPath)</OutDir>
+    </PropertyGroup>
+</Project>

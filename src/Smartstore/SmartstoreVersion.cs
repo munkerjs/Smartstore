@@ -51,7 +51,7 @@ namespace Smartstore
             var infoVersionAttr = Assembly.GetExecutingAssembly().GetAttribute<AssemblyInformationalVersionAttribute>(false);
             if (infoVersionAttr != null)
             {
-                _infoVersion = new Version(infoVersionAttr.InformationalVersion);
+                _infoVersion = new Version(infoVersionAttr.InformationalVersion.Split('+', '-')[0]);
             }
         }
 

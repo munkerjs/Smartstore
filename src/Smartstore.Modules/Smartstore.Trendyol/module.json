@@ -1,0 +1,12 @@
+{
+  "$schema": "../module.schema.json",
+  "Group": "Admin",
+  "SystemName": "Smartstore.Trendyol",
+  "FriendlyName": "Trendyol Entegration",
+  "Description": "Trendyol ile tam entegrasyon sunan premium modül.",
+  "Version": "5.1.0",
+  "MinAppVersion": "5.1.0",
+  "Author": "Münker Erkadam",
+  "Order": 1,
+  "ResourceRootKey": "Plugins.Developer.Trendyol"
+}

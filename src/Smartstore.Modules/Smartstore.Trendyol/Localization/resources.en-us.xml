@@ -1,0 +1,8 @@
+﻿<Language Name="English" IsDefault="false" IsRightToLeft="false">
+    <LocaleResource Name="Plugins.FriendlyName.Smartstore.Trendyol" AppendRootKey="false">
+        <Value>Trendyol Entegrasyonu</Value>
+    </LocaleResource>
+    <LocaleResource Name="Plugins.Description.Smartstore.Trendyol" AppendRootKey="false">
+        <Value>Trendyol için geliştirilmiş olan premium modüldür.</Value>
+    </LocaleResource>
+</Language>
