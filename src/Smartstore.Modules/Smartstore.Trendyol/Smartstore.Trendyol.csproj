@@ -10,6 +10,8 @@
       <None Remove="Localization\resources.en-us.xml" />
       <None Remove="Localization\resources.tr-tr.xml" />
       <None Remove="Views\Trendyol\Configure.cshtml" />
+      <None Remove="Views\Trendyol\_CreateOrUpdate.Configure.cshtml" />
+      <None Remove="Views\_ViewStart.cshtml" />
       <None Remove="wwwroot\admin.scss" />
       <None Remove="wwwroot\icon.png" />
       <None Remove="wwwroot\public.scss" />

@@ -11,6 +11,7 @@ using Smartstore.Data;
 using Smartstore.Data.Providers;
 using Smartstore.Engine;
 using Smartstore.Engine.Builders;
+using Smartstore.Trendyol.Services;
 
 namespace Smartstore.Trendyol
 {
@@ -34,7 +35,7 @@ namespace Smartstore.Trendyol
 
         public override void ConfigureContainer(ContainerBuilder builder, IApplicationContext appContext)
         {
-            // builder.RegisterType<TrendyolService>().As<ITrendyolService>().InstancePerLifetimeScope();
+           builder.RegisterType<ClientServices>().As<IClientServices>().InstancePerLifetimeScope();
         }
     }
 }

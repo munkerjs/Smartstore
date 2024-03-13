@@ -1,0 +1,84 @@
+﻿@model TrendyolApiModel
+
+@if (!Model.ServiceStatus)
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>@T("Plugins.Smartstore.Trendyol.ApiSettings.Warning")</strong> @T("Plugins.Smartstore.Trendyol.ApiSettings.WarningMessage")
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
+
+<form asp-action="Configure">
+    <div asp-validation-summary="All"></div>
+    <div class="adminContent">
+        <div class="adminRow">
+            <div class="adminTitle">
+                <smart-label asp-for="ApiUrl" />
+            </div>
+            <div class="adminData">
+                <setting-editor asp-for="ApiUrl"></setting-editor>
+                <span asp-validation-for="ApiUrl"></span>
+            </div>
+        </div>
+        <div class="adminRow">
+            <div class="adminTitle">
+                <smart-label asp-for="BuyerId" />
+            </div>
+            <div class="adminData">
+                <setting-editor asp-for="BuyerId"></setting-editor>
+                <span asp-validation-for="BuyerId"></span>
+            </div>
+        </div>
+        <div class="adminRow">
+            <div class="adminTitle">
+                <smart-label asp-for="ApiKey" />
+            </div>
+            <div class="adminData">
+                <setting-editor asp-for="ApiKey"></setting-editor>
+                <span asp-validation-for="ApiKey"></span>
+            </div>
+        </div>
+        <div class="adminRow">
+            <div class="adminTitle">
+                <smart-label asp-for="ApiSecret" />
+            </div>
+            <div class="adminData">
+                <setting-editor asp-for="ApiSecret"></setting-editor>
+                <span asp-validation-for="ApiSecret"></span>
+            </div>
+        </div>
+        <div class="adminRow">
+            <div class="adminTitle">
+                <smart-label asp-for="Token" />
+            </div>
+            <div class="adminData">
+                <setting-editor asp-for="Token"></setting-editor>
+                <span asp-validation-for="Token"></span>
+            </div>
+        </div>
+        <div class="adminRow">
+            <div class="adminTitle">
+                <div class="ctl-label"><label for="@T("Plugins.Smartstore.Trendyol.ApiSettings.ServiceStatus")">@T("Plugins.Smartstore.Trendyol.ApiSettings.ServiceStatus")</label></div>
+                
+            </div>
+            <div class="adminData">
+                @if (Model.ServiceStatus)
+                {
+                    <span class=" badge badge-success" style="line-height: 15px; font-size: 12px;">@T("Plugins.Smartstore.Trendyol.ApiSettings.ServiceStatusSuccess")</span>
+                }
+                else
+                {
+                    <span class="badge badge-danger" style="line-height: 15px; font-size: 12px;">@T("Plugins.Smartstore.Trendyol.ApiSettings.ServiceStatusError")</span>
+
+                }
+                </div>
+        </div>
+    </div>
+
+    <button id="SaveConfigButton" type="submit" name="save" class="btn btn-warning" value="save">
+        <i class="fa fa-check"></i>
+        <span>@T("Admin.Common.Save")</span>
+    </button>
+</form>

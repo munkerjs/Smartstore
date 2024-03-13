@@ -5,4 +5,64 @@
     <LocaleResource Name="Plugins.Description.Smartstore.Trendyol" AppendRootKey="false">
         <Value>Trendyol için geliştirilmiş olan premium modüldür..</Value>
     </LocaleResource>
+
+    <LocaleResource Name="Plugins.Smartstore.Trendyol.ApiSettings.Warning" AppendRootKey="false">
+        <Value>Uyarı!</Value>
+    </LocaleResource>
+    <LocaleResource Name="Plugins.Smartstore.Trendyol.ApiSettings.WarningMessage" AppendRootKey="false">
+        <Value>Trendyol panelinizin hesap ayarları kısmından API bilgilerini alıp, aşağıdaki bölüme tanımlayınız. Aksi halde bu modülü kullanamazsınız.</Value>
+    </LocaleResource>
+
+    <LocaleResource Name="Plugins.Smartstore.Trendyol.PageTitle" AppendRootKey="false">
+        <Children>
+            <LocaleResource Name="Configure">
+                <Value>Api Ayarları</Value>
+            </LocaleResource>
+            <LocaleResource Name="Products">
+                <Value>Ürünler</Value>
+            </LocaleResource>
+            <LocaleResource Name="Brands">
+                <Value>Markalar</Value>
+            </LocaleResource>
+            <LocaleResource Name="Categories">
+                <Value>Kategoriler</Value>
+            </LocaleResource>
+            <LocaleResource Name="Orders">
+                <Value>Siparişler</Value>
+            </LocaleResource>
+        </Children>
+    </LocaleResource>
+
+    <!-- Api Settings -->
+    <LocaleResource Name="Plugins.Smartstore.Trendyol.ApiSettings.BuyerId" AppendRootKey="false">
+        <Value>Satıcı ID</Value>
+    </LocaleResource>
+    <LocaleResource Name="Plugins.Smartstore.Trendyol.ApiSettings.ApiKey" AppendRootKey="false">
+        <Value>API Key</Value>
+    </LocaleResource>
+    <LocaleResource Name="Plugins.Smartstore.Trendyol.ApiSettings.ApiSecret" AppendRootKey="false">
+        <Value>API Secret</Value>
+    </LocaleResource>
+    <LocaleResource Name="Plugins.Smartstore.Trendyol.ApiSettings.Token" AppendRootKey="false">
+        <Value>Token</Value>
+    </LocaleResource>
+    <LocaleResource Name="Plugins.Smartstore.Trendyol.ApiSettings.ServiceStatusSuccess" AppendRootKey="false">
+        <Value>Başarılı</Value>
+    </LocaleResource>
+    <LocaleResource Name="Plugins.Smartstore.Trendyol.ApiSettings.ServiceStatusError" AppendRootKey="false">
+        <Value>Başarısız</Value>
+    </LocaleResource>
+    <LocaleResource Name="Plugins.Smartstore.Trendyol.ApiSettings.ServiceStatus" AppendRootKey="false">
+        <Value>Bağlantı Durumu</Value>
+    </LocaleResource>
+
+    <LocaleResource Name="Plugins.Smartstore.Trendyol.Products.Field" AppendRootKey="false">
+        <Children>
+            <LocaleResource Name="Title">
+                <Value>Ürün Adı</Value>
+            </LocaleResource>
+        </Children>
+    </LocaleResource>
+
+
 </Language>

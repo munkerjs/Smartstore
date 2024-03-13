@@ -6,44 +6,28 @@
 }
 
 @await Component.InvokeAsync("StoreScope")
+<tabstrip id="trendyol" sm-nav-style="Material" sm-onajaxsuccess="trendyolTab_onAjaxSuccess" sm-nav-position="Left">
+    <tab sm-title="@T("Plugins.Smartstore.Trendyol.PageTitle.Configure")"
+         sm-selected="true"
+         sm-icon="bi:gear"
+         sm-name="Trendyol Api Config">
+        <partial name="_CreateOrUpdate.Configure" model="Model" />
+    </tab>
+    @if (Model.ServiceStatus)
+    {
+        <tab sm-title="@T("Plugins.Smartstore.Trendyol.PageTitle.Products")"
+             sm-icon="bi:box"
+             sm-ajax="true"
+             sm-name="Products"
+             sm-adaptive-height="true">
+            <div>Ürünler</div>
+        </tab>
+    }
+</tabstrip>
 
-<form asp-action="Configure">
-    <widget target-zone="admin_button_toolbar_before">
-        <button id="SaveConfigButton" type="submit" name="save" class="btn btn-warning" value="save">
-            <i class="fa fa-check"></i>
-            <span>@T("Admin.Common.Save")</span>
-        </button>
-    </widget>
-
-    <div asp-validation-summary="All"></div>
-
-    <div class="adminContent">
-        <div class="adminRow">
-            <div class="adminTitle">
-                <smart-label asp-for="ApiKey" />
-            </div>
-            <div class="adminData">
-                <setting-editor asp-for="ApiKey" data-toggler-for="#pnlIgnorePaths"></setting-editor>
-                <span asp-validation-for="ApiKey"></span>
-            </div>
-        </div>
-        <div id="pnlIgnorePaths" class="adminRow">
-            <div class="adminTitle">
-                <smart-label asp-for="ApiSecret" />
-            </div>
-            <div class="adminData">
-                <setting-editor asp-for="ApiSecret"></setting-editor>
-                <span asp-validation-for="ApiSecret"></span>
-            </div>
-        </div>
-        <div class="adminRow">
-            <div class="adminTitle">
-                <smart-label asp-for="ApiUrl" />
-            </div>
-            <div class="adminData">
-                <setting-editor asp-for="ApiUrl"></setting-editor>
-                <span asp-validation-for="ApiUrl"></span>
-            </div>
-        </div>
-    </div>
-</form>
+<script sm-target-zone="Scripts" data-origin="trendyol">
+    function trendyolTab_onAjaxSuccess(tab, pane) {
+        applyCommonPlugins(pane);
+        reinitFormValidator("#trendyol");
+    }
+</script>
